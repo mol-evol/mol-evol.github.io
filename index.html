@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James McInerney | Evolutionary Biologist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --text: #1a1a1a;
+            --text-muted: #5a5a5a;
+            --accent: #2d5a3d;
+            --accent-light: #e8f0eb;
+            --card-bg: #ffffff;
+            --border: #e5e5e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header with photo */
+        header {
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        .photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .name {
+            font-family: 'Instrument Serif', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.4rem;
+            line-height: 1.1;
+        }
+
+        .tagline {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .roles {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        nav a:hover {
+            border-color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Research themes */
+        .themes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+        }
+
+        .theme-tag {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 0.45rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text);
+            transition: all 0.2s;
+        }
+
+        .theme-tag:hover {
+            background: var(--accent-light);
+            border-color: var(--accent);
+        }
+
+        /* Company card */
+        .company-card {
+            background: linear-gradient(135deg, #1a2f23 0%, #2d4a3a 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .company-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .company-card-text h3 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 0.4rem;
+        }
+
+        .company-card-text p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .company-card-arrow {
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        /* Software Grid */
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .software-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .software-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .software-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .software-card h3::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .software-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .software-card .stars {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 0.75rem;
+        }
+
+        /* Publications */
+        .publications-featured {
+            margin-bottom: 1.5rem;
+        }
+
+        .publication {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .publication:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .publication h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            line-height: 1.4;
+        }
+
+        .publication h3 a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+
+        .publication h3 a:hover {
+            border-color: var(--accent);
+        }
+
+        .publication .meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .publication .journal {
+            font-style: italic;
+        }
+
+        /* Expandable publications */
+        .more-publications {
+            margin-top: 1.5rem;
+        }
+
+        .more-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .more-toggle:hover {
+            background: var(--accent-light);
+            border-color: var(--accent);
+        }
+
+        .publications-expanded {
+            display: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .publications-expanded.show {
+            display: block;
+        }
+
+        .view-all-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .view-all-link:hover {
+            border-color: var(--accent);
+        }
+
+        /* Links section */
+        .links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .links a:hover {
+            background: var(--accent-light);
+            border-color: var(--accent);
+        }
+
+        .links a svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .photo {
+                width: 140px;
+                height: 140px;
+            }
+
+            .name {
+                font-size: 2.2rem;
+            }
+            
+            nav {
+                justify-content: center;
+            }
+            
+            header {
+                padding: 2.5rem 0 2rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+
+            .company-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .company-card-arrow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="photo.jpg" alt="James McInerney" class="photo">
+                <div class="header-text">
+                    <h1 class="name">James McInerney</h1>
+                    <p class="tagline">Evolutionary Biologist & Computational Scientist</p>
+                    <p class="roles">Professor & Head of Evolution, Ecology and Behaviour · University of Liverpool<br>
+                    Former President · Society for Molecular Biology and Evolution (2022)</p>
+                    <nav>
+                        <a href="#about">About</a>
+                        <a href="#software">Software</a>
+                        <a href="#publications">Publications</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>I study how bacterial genomes evolve, using bioinformatics, statistics, and machine learning. My research focuses on pangenomics—understanding the complete set of genes across bacterial species—and how horizontal gene transfer shapes microbial diversity.</p>
+            <p>I'm particularly interested in applying transformer models and AI to decode the "grammar" of bacterial genomes, with applications in antimicrobial resistance prediction and synthetic biology. This work sits at the intersection of evolutionary biology and modern machine learning.</p>
+            
+            <div class="themes">
+                <span class="theme-tag">Pangenomics</span>
+                <span class="theme-tag">Horizontal Gene Transfer</span>
+                <span class="theme-tag">AI & Machine Learning</span>
+                <span class="theme-tag">Antimicrobial Resistance</span>
+                <span class="theme-tag">Phylogenetics</span>
+                <span class="theme-tag">Eukaryotic Origins</span>
+            </div>
+
+            <a href="https://pangenome.ai" class="company-card" target="_blank">
+                <div class="company-card-text">
+                    <h3>Pangenome AI</h3>
+                    <p>Revolutionising bioscience with Large Pangenome Models that extract evolutionary wisdom from millions of genomes.</p>
+                </div>
+                <span class="company-card-arrow">→</span>
+            </a>
+        </section>
+
+        <section id="software">
+            <h2>Software</h2>
+            <div class="software-grid">
+                <a href="https://github.com/mol-evol/panGPT" class="software-card" target="_blank">
+                    <h3>panGPT</h3>
+                    <p>A Generative Pre-Trained Transformer package for pangenomes. Train language models on bacterial gene content.</p>
+                    <div class="stars">★ 53 stars</div>
+                </a>
+                <a href="https://github.com/mol-evol/gcua" class="software-card" target="_blank">
+                    <h3>GCUA</h3>
+                    <p>General Codon Usage Analysis. Analyse codon usage patterns and biases across genomes.</p>
+                    <div class="stars">★ 11 stars</div>
+                </a>
+                <a href="https://github.com/mol-evol/panDecay" class="software-card" target="_blank">
+                    <h3>panDecay</h3>
+                    <p>Calculate support measures for phylogenies using pangenomic data and phylogenetic decay analysis.</p>
+                    <div class="stars">★ 2 stars</div>
+                </a>
+                <a href="https://github.com/mol-evol/Maximum-Likelihood-calculations" class="software-card" target="_blank">
+                    <h3>ML Phylogenetics</h3>
+                    <p>A teaching tool to explain Maximum Likelihood calculations in phylogenetic inference.</p>
+                </a>
+                <a href="https://mol-evol.github.io/grant-evaluator/" class="software-card" target="_blank">
+                    <h3>Grant Evaluator</h3>
+                    <p>Web tool for evaluating and scoring research grant applications.</p>
+                </a>
+                <a href="https://github.com/mol-evol" class="software-card" target="_blank">
+                    <h3>View all on GitHub</h3>
+                    <p>Browse the complete collection of tools and software packages.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <div class="publications-featured">
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1073/pnas.2304934120" target="_blank">Contingency, repeatability, and predictability in the evolution of a prokaryotic pangenome</a></h3>
+                    <p class="meta"><span class="journal">PNAS</span> · 2024 · Beavan A, Domingo-Sananes MR, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://www.nature.com/articles/s41564-022-01208-7" target="_blank">Gene essentiality evolves across a pangenome</a></h3>
+                    <p class="meta"><span class="journal">Nature Microbiology</span> · 2022 · Beavan A, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1016/j.tim.2020.12.004" target="_blank">Mechanisms that shape microbial pangenomes</a></h3>
+                    <p class="meta"><span class="journal">Trends in Microbiology</span> · 2021 · Domingo-Sananes MR, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://www.nature.com/articles/nmicrobiol201740" target="_blank">Why prokaryotes have pangenomes</a></h3>
+                    <p class="meta"><span class="journal">Nature Microbiology</span> · 2017 · McInerney JO, McNally A, O'Connell MJ</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://www.nature.com/articles/nature14963" target="_blank">Endosymbiotic origin and differential loss of eukaryotic genes</a></h3>
+                    <p class="meta"><span class="journal">Nature</span> · 2015 · Ku C, Nelson-Sathi S, ... McInerney JO, et al.</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://www.nature.com/articles/nature13805" target="_blank">Origins of major archaeal clades correspond to gene acquisitions from bacteria</a></h3>
+                    <p class="meta"><span class="journal">Nature</span> · 2015 · Nelson-Sathi S, ... McInerney JO, et al.</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://www.nature.com/articles/nrmicro3271" target="_blank">The hybrid nature of the eukaryotes and a consilient view of life on Earth</a></h3>
+                    <p class="meta"><span class="journal">Nature Reviews Microbiology</span> · 2014 · McInerney JO, O'Connell MJ, Pisani D</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1016/j.cell.2014.03.054" target="_blank">Population genomics reveal recent speciation, rapid evolutionary adaptation and positive selection in polar bear</a></h3>
+                    <p class="meta"><span class="journal">Cell</span> · 2014 · Polar Bear Sequencing Consortium</p>
+                </div>
+            </div>
+
+            <button class="more-toggle" onclick="togglePublications()">Show more publications</button>
+
+            <div class="publications-expanded" id="more-pubs">
+                <div class="publication">
+                    <h3><a href="#" target="_blank">PanForest: predicting genes in genomes using random forests</a></h3>
+                    <p class="meta"><span class="journal">Bioinformatics</span> · 2026 · Beavan AJS, Domingo-Sananes MR, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Classifying convergences in the light of horizontal gene transfer: Epaktovars and Xenotypes</a></h3>
+                    <p class="meta"><span class="journal">Molecular Biology and Evolution</span> · 2025 · McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1371/journal.pbio.3002917" target="_blank">Reconstructing the last common ancestor of all eukaryotes</a></h3>
+                    <p class="meta"><span class="journal">PLoS Biology</span> · 2024 · Richards TA, ... McInerney JO, et al.</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://academic.oup.com/mbe/article/40/1/msac232/6775222" target="_blank">Prokaryotic pangenomes act as evolving ecosystems</a></h3>
+                    <p class="meta"><span class="journal">Molecular Biology and Evolution</span> · 2023 · McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1099/mgen.0.000650" target="_blank">Gene-gene relationships in an Escherichia coli accessory genome are linked to function and mobility</a></h3>
+                    <p class="meta"><span class="journal">Microbial Genomics</span> · 2021 · Hall RJ, Whelan FJ, ... McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1093/molbev/msab139" target="_blank">Evidence for selection in the abundant accessory gene content of a prokaryote pangenome</a></h3>
+                    <p class="meta"><span class="journal">Molecular Biology and Evolution</span> · 2021 · Whelan FJ, Hall RJ, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1099/mgen.0.000338" target="_blank">Coinfinder: detecting significant associations and dissociations in pangenomes</a></h3>
+                    <p class="meta"><span class="journal">Microbial Genomics</span> · 2020 · Whelan FJ, Rusilowicz M, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://link.springer.com/chapter/10.1007/978-3-030-38281-0_7" target="_blank">Pangenomes and selection: the public goods hypothesis</a></h3>
+                    <p class="meta"><span class="journal">The Pangenome (Springer)</span> · 2020 · McInerney JO, Whelan FJ, et al.</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://www.nature.com/articles/nmicrobiol2016139" target="_blank">Evolution: A four billion year old metabolism</a></h3>
+                    <p class="meta"><span class="journal">Nature Microbiology</span> · 2016 · McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1073/pnas.1421020112" target="_blank">Gene similarity networks provide new tools for understanding eukaryote origins and evolution</a></h3>
+                    <p class="meta"><span class="journal">PNAS</span> · 2013 · Álvarez-Ponce D, Lopez P, Bapteste E, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1073/pnas.1209119109" target="_blank">Acquisition of 1,000 eubacterial genes physiologically transformed a methanogen at the origin of Haloarchaea</a></h3>
+                    <p class="meta"><span class="journal">PNAS</span> · 2012 · Nelson-Sathi S, ... McInerney JO, et al.</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1073/pnas.1007215107" target="_blank">Eukaryotic genes of archaebacterial origin are more important than the more numerous eubacterial genes</a></h3>
+                    <p class="meta"><span class="journal">PNAS</span> · 2010 · Cotton JA, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://doi.org/10.1093/molbev/msm048" target="_blank">Supertrees disentangle the chimerical origin of eukaryotic genomes</a></h3>
+                    <p class="meta"><span class="journal">Molecular Biology and Evolution</span> · 2007 · Pisani D, Cotton JA, McInerney JO</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="https://www.pnas.org/doi/10.1073/pnas.95.18.10698" target="_blank">Replicational and transcriptional selection on codon usage in Borrelia burgdorferi</a></h3>
+                    <p class="meta"><span class="journal">PNAS</span> · 1998 · McInerney JO</p>
+                </div>
+            </div>
+
+            <a href="https://orcid.org/0000-0003-1885-2503" class="view-all-link" target="_blank">View all 131 publications on ORCID →</a>
+        </section>
+
+        <section id="contact">
+            <h2>Connect</h2>
+            <div class="links">
+                <a href="mailto:james.mcinerney@liverpool.ac.uk">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                    Email
+                </a>
+                <a href="https://github.com/mol-evol" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="https://orcid.org/0000-0003-1885-2503" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.209-.553-3.722-3.916-3.722h-2.403z"/></svg>
+                    ORCID
+                </a>
+                <a href="https://www.liverpool.ac.uk/evolution-ecology-and-behaviour/" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                    Department
+                </a>
+                <a href="https://pangenome.ai" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    Pangenome AI
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 James McInerney</p>
+        </footer>
+    </div>
+
+    <script>
+        function togglePublications() {
+            const expanded = document.getElementById('more-pubs');
+            const button = document.querySelector('.more-toggle');
+            expanded.classList.toggle('show');
+            button.textContent = expanded.classList.contains('show') ? 'Show fewer publications' : 'Show more publications';
+        }
+    </script>
+</body>
+</html>
