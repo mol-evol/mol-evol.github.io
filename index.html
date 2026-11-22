@@ -98,6 +98,10 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-ra
 .byline img { width: 96px; height: 96px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; flex: none; }
 .byline p { font-size: 1.3125rem; line-height: 1.4; font-weight: 300; max-width: 34em; color: #fff; }
 
+/* Origin story, in James's own words */
+.origin { padding: 6rem 0; border-bottom: 1px solid var(--rule); }
+.origin p { font-weight: 300; font-size: clamp(1.5rem, 2.5vw, 2.125rem); line-height: 1.38; letter-spacing: -0.005em; color: var(--atlantic); max-width: 27em; padding-left: 2rem; border-left: 3px solid var(--gold); }
+
 /* Paper spreads: one claim, one front page */
 .spread { min-height: 76svh; display: flex; align-items: center; padding: 4rem 0; border-bottom: 1px solid var(--rule); overflow: hidden; }
 .spread .wrap { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 5rem; align-items: center; }
@@ -160,7 +164,8 @@ footer { background: var(--deep); color: #9fbdb8; font-family: var(--sans); font
   .byline img { width: 72px; height: 72px; }
   .byline p { font-size: 1.1875rem; }
   .spread, .lead { min-height: 0; }
-  .spread, .close, .lead { padding: 3.5rem 0; }
+  .spread, .close, .lead, .origin { padding: 3.5rem 0; }
+  .origin p { padding-left: 1.25rem; }
   .close .wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .roles, .honours { grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
   .spread .wrap, .spread.flip .wrap { grid-template-columns: 1fr; gap: 3rem; }
@@ -213,6 +218,12 @@ footer { background: var(--deep); color: #9fbdb8; font-family: var(--sans); font
     </div>
   </div>
 </header>
+
+<section class="origin">
+  <div class="wrap">
+    <p>In 1990 on a train from Galway to Dublin, I read a landmark paper written by Carl Woese about the tree of life. By Athlone, I had read it twice, and it changed the direction of my life. I was twenty-one. In 2004 my lab built 1,117 gene trees from 61 genomes, expecting them to agree, so I could make the very best version of the Tree of Life. The trees didn’t agree. Since then, I have been trying to figure out why.</p>
+  </div>
+</section>
 
 <main id="science">
 
