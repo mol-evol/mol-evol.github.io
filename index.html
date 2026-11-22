@@ -127,6 +127,30 @@ figure.idle .bar { transform: scaleX(0); }
 @keyframes draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
 figure svg .quiet { fill: #8fb0ab; font-size: 13px; }
 
+/* Code band: thirty years of tools on one line */
+.code { padding: 5.5rem 0; border-bottom: 1px solid var(--rule); }
+.code h2 { font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.25rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--atlantic); }
+.code .intro { max-width: 36em; margin-top: 1.5rem; }
+.tl { list-style: none; display: grid; grid-template-columns: repeat(13, 1fr); position: relative; height: 11.5rem; margin-top: 2.5rem; }
+.tl::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px solid var(--rule); }
+.tl li { position: relative; }
+.tl li::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--dot); border: 2px solid var(--dot); transition: transform .15s ease; }
+.tl li:hover::after, .tl li:focus-within::after { transform: scale(1.5); }
+.tl .stat { --dot: #5a9c93; } .tl .phy { --dot: var(--atlantic); } .tl .ml { --dot: var(--gold); }
+.tl .mile { --dot: var(--atlantic); } .tl .mile::after { background: var(--paper); }
+.tl button { position: absolute; left: 50%; transform: translateX(-50%); width: max-content; max-width: 9.5rem; background: none; border: 0; padding: 0.4rem 0.25rem; cursor: pointer; text-align: center; font: 500 0.9375rem/1.25 var(--sans); color: var(--ink); }
+.tl li:nth-child(odd) button { bottom: calc(50% + 14px); }
+.tl li:nth-child(even) button { top: calc(50% + 14px); }
+.tl button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+.tl .y { display: block; font-weight: 400; font-size: 0.8125rem; color: var(--muted); }
+.tl .d { display: none; }
+#tl-status { font-size: 1.25rem; min-height: 3.2em; max-width: 34em; margin-top: 1.5rem; color: var(--atlantic); }
+.tl-key { font-family: var(--sans); font-size: 0.875rem; color: var(--muted); }
+.tl-key .key { border-radius: 50%; margin-left: 0.9em; }
+.tl-key .key:first-child { margin-left: 0; }
+.key.stat { background: #5a9c93; } .key.phy { background: var(--atlantic); } .key.ml { background: var(--gold); }
+.key.mile { background: var(--paper); box-shadow: inset 0 0 0 2px var(--atlantic); }
+
 /* Leadership band */
 .lead { background: var(--atlantic); color: #dcebe8; padding: 5rem 0; }
 .lead .wrap { width: 100%; }
@@ -164,7 +188,16 @@ footer { background: var(--deep); color: #9fbdb8; font-family: var(--sans); font
   .byline img { width: 72px; height: 72px; }
   .byline p { font-size: 1.1875rem; }
   .spread, .lead { min-height: 0; }
-  .spread, .close, .lead, .origin { padding: 3.5rem 0; }
+  .spread, .close, .lead, .origin, .code { padding: 3.5rem 0; }
+  .tl { display: block; height: auto; margin-top: 2rem; }
+  .tl::before { left: 6px; right: auto; top: 0.5rem; bottom: 0.5rem; border-top: 0; border-left: 2px solid var(--rule); }
+  .tl li { padding: 0 0 1.1rem 2rem; }
+  .tl li::after { left: 7px; top: 0.75rem; }
+  .tl button, .tl li:nth-child(odd) button, .tl li:nth-child(even) button { position: static; transform: none; display: block; width: auto; max-width: none; text-align: left; padding: 0; cursor: default; }
+  .tl .y { display: inline; }
+  .tl .d { display: block; font-weight: 400; color: var(--muted); margin-top: 0.15rem; }
+  #tl-status { display: none; }
+  .tl-key .key { margin-left: 0; } .tl-key { line-height: 1.9; }
   .origin p { padding-left: 1.25rem; }
   .close .wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .roles, .honours { grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
@@ -183,6 +216,7 @@ footer { background: var(--deep); color: #9fbdb8; font-family: var(--sans); font
     <a class="mark" href="#top">James McInerney</a>
     <ul>
       <li><a href="#science">Science</a></li>
+      <li><a href="#code">Code</a></li>
       <li><a href="#leadership">Leadership</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -298,6 +332,30 @@ footer { background: var(--deep); color: #9fbdb8; font-family: var(--sans); font
 </article>
 
 </main>
+
+<section class="code" id="code">
+  <div class="wrap">
+    <h2>I am a biologist who writes code.</h2>
+    <p class="intro">Almost every question on this page needed software that did not exist, so my group wrote it. That has taken us from sequence statistics, through phylogenetics on clusters and supercomputers, to machine learning and language models. The biology sets the question. The mathematics and the computing answer it.</p>
+    <ol class="tl">
+      <li class="stat"><button type="button"><span class="y">1998</span> <span class="n">GCUA</span><span class="d">Measures which codons a genome prefers. My first released program.</span></button></li>
+      <li class="mile"><button type="button"><span class="y">2000</span> <span class="n">Bioinformatics degree</span><span class="d">A new degree in computational biology and bioinformatics at Maynooth, one of the first in Europe.</span></button></li>
+      <li class="stat"><button type="button"><span class="y">2003</span> <span class="n">Crann</span><span class="d">Detects adaptive evolution in protein-coding genes.</span></button></li>
+      <li class="phy"><button type="button"><span class="y">2004</span> <span class="n">CLANN</span><span class="d">Builds supertrees from thousands of gene trees.</span></button></li>
+      <li class="phy"><button type="button"><span class="y">2004</span> <span class="n">DPRml</span><span class="d">Spreads maximum-likelihood tree building across many computers.</span></button></li>
+      <li class="mile"><button type="button"><span class="y">2004</span> <span class="n">ICHEC</span><span class="d">With colleagues from seven universities, proposed the Irish Centre for High-End Computing and joined its first board.</span></button></li>
+      <li class="phy"><button type="button"><span class="y">2005</span> <span class="n">Modelgenerator</span><span class="d">Chooses the best model of protein evolution for a dataset.</span></button></li>
+      <li class="phy"><button type="button"><span class="y">2005</span> <span class="n">MultiPhyl</span><span class="d">A high-throughput phylogenetics service running on distributed computers.</span></button></li>
+      <li class="phy"><button type="button"><span class="y">2006</span> <span class="n">TOPD/FMTS</span><span class="d">Compares phylogenetic trees with one another.</span></button></li>
+      <li class="phy"><button type="button"><span class="y">2010</span> <span class="n">TIGER</span><span class="d">Finds the fastest-evolving sites in an alignment without needing a tree.</span></button></li>
+      <li class="ml"><button type="button"><span class="y">2020</span> <span class="n">Coinfinder</span><span class="d">Finds genes that associate with, or avoid, one another across a pangenome.</span></button></li>
+      <li class="ml"><button type="button"><span class="y">2023</span> <span class="n">panForest</span><span class="d">Random forests that predict whether a gene is present from the rest of the genome.</span></button></li>
+      <li class="ml"><button type="button"><span class="y">2024</span> <span class="n">panGPT</span><span class="d">A transformer language model trained on bacterial pangenomes, run on Isambard-AI.</span></button></li>
+    </ol>
+    <p id="tl-status" aria-live="polite">Eleven released tools and two beginnings. Point at one.</p>
+    <p class="tl-key"><span class="key stat"></span>Sequence statistics <span class="key phy"></span>Phylogenetics and high-performance computing <span class="key ml"></span>Machine learning and AI <span class="key mile"></span>Things I helped start</p>
+  </div>
+</section>
 
 <section class="lead" id="leadership">
   <div class="wrap">
@@ -558,6 +616,17 @@ footer { background: var(--deep); color: #9fbdb8; font-family: var(--sans); font
       slot.setAttribute('fill', '#d9b13b'); slot.removeAttribute('stroke-dasharray');
       q.textContent = 'gyrB'; q.style.fill = '#072a32';
     }, 750);
+  });
+})();
+
+// code timeline: describe the tool being pointed at
+(function () {
+  var out = document.getElementById('tl-status');
+  document.querySelectorAll('.tl button').forEach(function (b) {
+    function show() {
+      out.textContent = b.querySelector('.y').textContent + '. ' + b.querySelector('.n').textContent + '. ' + b.querySelector('.d').textContent;
+    }
+    b.addEventListener('mouseenter', show); b.addEventListener('focus', show); b.addEventListener('click', show);
   });
 })();
 
