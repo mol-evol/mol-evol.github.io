@@ -30,7 +30,8 @@
   "sameAs": [
     "https://orcid.org/0000-0003-1885-2503",
     "https://github.com/mol-evol",
-    "https://bsky.app/profile/jomcinerney.bsky.social"
+    "https://bsky.app/profile/jomcinerney.bsky.social",
+    "https://profmcinerney.substack.com"
   ]
 }
 </script>
@@ -137,7 +138,7 @@ figure svg .quiet { fill: var(--on-dark-2); font-size: 13px; }
 .code { padding: 5.5rem 0; border-bottom: 1px solid var(--rule); }
 .code h2 { font-weight: 400; font-size: clamp(2rem, 4vw, 3.125rem); line-height: 1.08; letter-spacing: -0.035em; color: var(--atlantic); }
 .code .intro { max-width: 36em; margin-top: 1.5rem; }
-.tl { list-style: none; display: grid; grid-template-columns: repeat(13, 1fr); position: relative; height: 11.5rem; margin-top: 2.5rem; }
+.tl { list-style: none; display: grid; grid-template-columns: repeat(14, 1fr); position: relative; height: 11.5rem; margin-top: 2.5rem; }
 .tl::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px solid var(--rule); }
 .tl li { position: relative; }
 .tl li::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--dot); border: 2px solid var(--dot); transition: transform .15s ease; }
@@ -152,10 +153,29 @@ figure svg .quiet { fill: var(--on-dark-2); font-size: 13px; }
 .tl .d { display: none; }
 #tl-status { font-size: 1.25rem; min-height: 3.2em; max-width: 34em; margin-top: 1.5rem; color: var(--atlantic); }
 .tl-key { font-family: var(--sans); font-size: 0.875rem; color: var(--muted); }
+.tl-code { font-family: var(--sans); font-size: 1rem; line-height: 1.6; max-width: 46em; margin-top: 1.5rem; }
 .tl-key .key { border-radius: 50%; margin-left: 0.9em; }
 .tl-key .key:first-child { margin-left: 0; }
 .key.stat { background: #9a86cf; } .key.phy { background: var(--atlantic); } .key.ml { background: var(--gold); }
 .key.mile { background: var(--paper); box-shadow: inset 0 0 0 2px var(--atlantic); }
+
+/* Writing band: newsletter, three chosen posts, Substack's own signup box */
+.writing { padding: 5.5rem 0; border-bottom: 1px solid var(--rule); }
+.writing-top { display: grid; grid-template-columns: minmax(0, 1fr) 480px; gap: 4rem; align-items: start; }
+.writing h2 { font-weight: 400; font-size: clamp(2rem, 4vw, 3.125rem); line-height: 1.08; letter-spacing: -0.035em; color: var(--atlantic); }
+.writing .intro { max-width: 30em; margin-top: 1.5rem; }
+.writing .all { font-family: var(--sans); font-size: 1rem; margin-top: 1.25rem; }
+.sub-card { background: var(--atlantic); color: var(--on-dark); border-radius: 4px; padding: 2.25rem; }
+.sub-card .name { font-family: var(--display); font-size: 2rem; line-height: 1.1; letter-spacing: -0.03em; color: #fff; }
+.sub-card .name + p { margin-top: 0.75rem; font-size: 1.125rem; }
+.sub-btn { display: inline-block; margin-top: 1.5rem; padding: 0.8rem 1.4rem; border-radius: 999px; background: var(--gold); color: var(--deep); font: 600 1rem var(--sans); text-decoration: none; transition: transform .1s ease, filter .15s ease; }
+.sub-btn:hover { filter: brightness(1.08); }
+.sub-btn:active { transform: translateY(1px); }
+.posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 3.5rem; }
+.post { display: block; border-top: 3px solid var(--gold); padding-top: 1.25rem; text-decoration: none; color: var(--ink); }
+.post .t { display: block; font-family: var(--display); font-size: 1.625rem; line-height: 1.15; letter-spacing: -0.025em; color: var(--atlantic); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.15em; transition: text-decoration-color .15s ease; }
+.post:hover .t, .post:focus-visible .t { text-decoration-color: currentColor; }
+.post .s { display: block; font-size: 1.0625rem; line-height: 1.5; margin-top: 0.75rem; }
 
 /* Leadership band */
 .lead { background: var(--atlantic); color: var(--on-dark); padding: 5rem 0; }
@@ -194,7 +214,9 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
   .byline img { width: 72px; height: 72px; }
   .byline p { font-size: 1.1875rem; }
   .spread, .lead { min-height: 0; }
-  .spread, .close, .lead, .origin, .code { padding: 3.5rem 0; }
+  .spread, .close, .lead, .origin, .code, .writing { padding: 3.5rem 0; }
+  .writing-top, .posts { grid-template-columns: 1fr; gap: 2rem; }
+  .posts { margin-top: 2.5rem; }
   .tl { display: block; height: auto; margin-top: 2rem; }
   .tl::before { left: 6px; right: auto; top: 0.5rem; bottom: 0.5rem; border-top: 0; border-left: 2px solid var(--rule); }
   .tl li { padding: 0 0 1.1rem 2rem; }
@@ -223,6 +245,7 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
     <ul>
       <li><a href="#science">Science</a></li>
       <li><a href="#code">Code</a></li>
+      <li><a href="#writing">Writing</a></li>
       <li><a href="#leadership">Leadership</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -344,22 +367,55 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
     <h2>I am a biologist who writes code.</h2>
     <p class="intro">Almost every question on this page needed software that did not exist, so my group wrote it. That has taken us from sequence statistics, through phylogenetics on clusters and supercomputers, to machine learning and language models. The biology sets the question. The mathematics and the computing answer it.</p>
     <ol class="tl">
-      <li class="stat"><button type="button"><span class="y">1998</span> <span class="n">GCUA</span><span class="d">Measures which codons a genome prefers. My first released program.</span></button></li>
+      <li class="stat"><button type="button" data-href="https://github.com/mol-evol/gcua"><span class="y">1998</span> <span class="n">GCUA</span><span class="d">Measures which codons a genome prefers. My first released program.</span></button></li>
       <li class="mile"><button type="button"><span class="y">2000</span> <span class="n">Bioinformatics degree</span><span class="d">A new degree in computational biology and bioinformatics at Maynooth, one of the first in Europe.</span></button></li>
       <li class="stat"><button type="button"><span class="y">2003</span> <span class="n">Crann</span><span class="d">Detects adaptive evolution in protein-coding genes.</span></button></li>
-      <li class="phy"><button type="button"><span class="y">2004</span> <span class="n">CLANN</span><span class="d">Builds supertrees from thousands of gene trees.</span></button></li>
+      <li class="phy"><button type="button" data-href="https://github.com/ChrisCreevey/clann"><span class="y">2004</span> <span class="n">CLANN</span><span class="d">Builds supertrees from thousands of gene trees.</span></button></li>
       <li class="phy"><button type="button"><span class="y">2004</span> <span class="n">DPRml</span><span class="d">Spreads maximum-likelihood tree building across many computers.</span></button></li>
       <li class="mile"><button type="button"><span class="y">2004</span> <span class="n">ICHEC</span><span class="d">With colleagues from seven universities, proposed the Irish Centre for High-End Computing and joined its first board.</span></button></li>
       <li class="phy"><button type="button"><span class="y">2005</span> <span class="n">Modelgenerator</span><span class="d">Chooses the best model of protein evolution for a dataset.</span></button></li>
       <li class="phy"><button type="button"><span class="y">2005</span> <span class="n">MultiPhyl</span><span class="d">A high-throughput phylogenetics service running on distributed computers.</span></button></li>
-      <li class="phy"><button type="button"><span class="y">2006</span> <span class="n">TOPD/FMTS</span><span class="d">Compares phylogenetic trees with one another.</span></button></li>
+      <li class="phy"><button type="button" data-href="https://ppuigbo.me/programs/topd/"><span class="y">2006</span> <span class="n">TOPD/FMTS</span><span class="d">Compares phylogenetic trees with one another.</span></button></li>
       <li class="phy"><button type="button"><span class="y">2010</span> <span class="n">TIGER</span><span class="d">Finds the fastest-evolving sites in an alignment without needing a tree.</span></button></li>
-      <li class="ml"><button type="button"><span class="y">2020</span> <span class="n">Coinfinder</span><span class="d">Finds genes that associate with, or avoid, one another across a pangenome.</span></button></li>
-      <li class="ml"><button type="button"><span class="y">2023</span> <span class="n">panForest</span><span class="d">Random forests that predict whether a gene is present from the rest of the genome.</span></button></li>
-      <li class="ml"><button type="button"><span class="y">2024</span> <span class="n">panGPT</span><span class="d">A transformer language model trained on bacterial pangenomes, run on Isambard-AI.</span></button></li>
+      <li class="ml"><button type="button" data-href="https://github.com/fwhelan/coinfinder"><span class="y">2020</span> <span class="n">Coinfinder</span><span class="d">Finds genes that associate with, or avoid, one another across a pangenome.</span></button></li>
+      <li class="ml"><button type="button" data-href="https://github.com/alanbeavan/PanForest"><span class="y">2023</span> <span class="n">panForest</span><span class="d">Random forests that predict whether a gene is present from the rest of the genome.</span></button></li>
+      <li class="ml"><button type="button" data-href="https://github.com/mol-evol/panGPT"><span class="y">2024</span> <span class="n">panGPT</span><span class="d">A transformer language model trained on bacterial pangenomes, run on Isambard-AI.</span></button></li>
+      <li class="phy"><button type="button" data-href="https://github.com/mol-evol/craic"><span class="y">2026</span> <span class="n">CRAIC</span><span class="d">Multiple sequence alignment and re-alignment, also useful for teaching. Under review.</span></button></li>
     </ol>
-    <p id="tl-status" aria-live="polite">Eleven released tools and two beginnings. Point at one.</p>
+    <p id="tl-status" aria-live="polite">Twelve tools and two beginnings. Point at one.</p>
     <p class="tl-key"><span class="key stat"></span>Sequence statistics <span class="key phy"></span>Phylogenetics and high-performance computing <span class="key ml"></span>Machine learning and AI <span class="key mile"></span>Things I helped start</p>
+    <p class="tl-code">Get the code: <a href="https://github.com/mol-evol/panGPT">panGPT</a>, <a href="https://github.com/mol-evol/panDecay">panDecay</a>, <a href="https://github.com/mol-evol/craic">CRAIC</a>, <a href="https://github.com/mol-evol/gcua">GCUA</a>, the <a href="https://mol-evol.github.io/grant-evaluator/">Grant Evaluator</a> and the <a href="https://github.com/mol-evol/Maximum-Likelihood-calculations">maximum likelihood calculations</a>. With collaborators: <a href="https://github.com/alanbeavan/PanForest">panForest</a>, <a href="https://github.com/fwhelan/coinfinder">Coinfinder</a>, <a href="https://github.com/ChrisCreevey/clann">CLANN</a> and <a href="https://ppuigbo.me/programs/topd/">TOPD/FMTS</a>. <a href="https://github.com/mol-evol">Everything else is on GitHub</a>.</p>
+  </div>
+</section>
+
+<section class="writing" id="writing">
+  <div class="wrap">
+    <div class="writing-top">
+      <div>
+        <h2>I write about evolution for everyone.</h2>
+        <p class="intro">The Long Game is my newsletter on how evolution works, read by more than 1,400 subscribers. It runs alongside a book I am writing on why life has had to gamble to survive.</p>
+        <p class="all"><a href="https://profmcinerney.substack.com/archive">Read every post on Substack</a></p>
+      </div>
+      <div class="sub-card">
+        <p class="name">The Long Game</p>
+        <p>A free newsletter about evolution, sent by email whenever a new piece is ready.</p>
+        <a class="sub-btn" href="https://profmcinerney.substack.com/subscribe">Subscribe on Substack</a>
+      </div>
+    </div>
+    <div class="posts">
+      <a class="post" href="https://profmcinerney.substack.com/p/a-race-with-no-finish-line">
+        <span class="t">A Race With No Finish Line</span>
+        <span class="s">An evolutionary law that made people uncomfortable when it came out.</span>
+      </a>
+      <a class="post" href="https://profmcinerney.substack.com/p/genomes-are-models-of-the-world">
+        <span class="t">Genomes are models of the world</span>
+        <span class="s">What machine learning revealed about predictability in a bacterial pangenome.</span>
+      </a>
+      <a class="post" href="https://profmcinerney.substack.com/p/the-biology-of-we">
+        <span class="t">The Biology of “We”</span>
+        <span class="s">The self isn’t a fortress. It’s a permeable membrane, and that’s what keeps you alive.</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -420,6 +476,7 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
         <li><a href="https://orcid.org/0000-0003-1885-2503">ORCID</a></li>
         <li><a href="https://github.com/mol-evol">GitHub</a></li>
         <li><a href="https://bsky.app/profile/jomcinerney.bsky.social">Bluesky</a></li>
+        <li><a href="https://profmcinerney.substack.com">Substack</a></li>
         <li><a href="https://www.liverpool.ac.uk/evolution-ecology-and-behaviour/">Department</a></li>
         <li><a href="https://pangenome.ai">Pangenome AI</a></li>
       </ul>
@@ -631,8 +688,14 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
   document.querySelectorAll('.tl button').forEach(function (b) {
     function show() {
       out.textContent = b.querySelector('.y').textContent + '. ' + b.querySelector('.n').textContent + '. ' + b.querySelector('.d').textContent;
+      if (b.dataset.href) {
+        var a = document.createElement('a');
+        a.href = b.dataset.href; a.textContent = 'Get the code';
+        out.append(' ', a, '.');
+      }
     }
-    b.addEventListener('mouseenter', show); b.addEventListener('focus', show); b.addEventListener('click', show);
+    // listen on the whole column (dot, label and the space between), not just the label
+    b.parentNode.addEventListener('mouseenter', show); b.addEventListener('focus', show); b.parentNode.addEventListener('click', show);
   });
 })();
 
