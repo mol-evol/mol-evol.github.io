@@ -6,6 +6,9 @@
 <title>Professor James McInerney | Evolutionary biologist and academic leader</title>
 <meta name="description" content="James McInerney is Chair in Evolutionary Biology and Head of the Department of Evolution, Ecology and Behaviour at the University of Liverpool. Former Head of the School of Life Sciences at Nottingham and President of the Society for Molecular Biology and Evolution.">
 <meta name="author" content="James O. McInerney">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%2326323d%22/%3E%3Cg fill=%22%23d8a23f%22%3E%3Crect x=%2211%22 y=%2211%22 width=%2212%22 height=%2212%22/%3E%3Crect x=%2211%22 y=%2226%22 width=%2212%22 height=%2212%22/%3E%3Crect x=%2211%22 y=%2241%22 width=%2212%22 height=%2212%22/%3E%3C/g%3E%3Cg fill=%22%23a9b9c6%22%3E%3Crect x=%2226%22 y=%2211%22 width=%2212%22 height=%2212%22/%3E%3Crect x=%2241%22 y=%2226%22 width=%2212%22 height=%2212%22/%3E%3Crect x=%2226%22 y=%2241%22 width=%2212%22 height=%2212%22/%3E%3Crect x=%2241%22 y=%2241%22 width=%2212%22 height=%2212%22 fill=%22%23fff%22/%3E%3C/g%3E%3C/svg%3E">
+<link rel="alternate icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="canonical" href="https://mol-evol.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Professor James McInerney">
@@ -37,25 +40,25 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..600&family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --atlantic: #3b1f6e;   /* crystal violet: hero, leadership band, headings */
-  --deep: #2a1452;       /* darker violet: figure panels, footer */
-  --paper: #f7f3f9;
-  --ink: #1c1230;
-  --muted: #6a5f7a;
-  --rule: #dfd6ea;
-  --gold: #ff5c93;       /* safranin pink: core genes, accents on dark */
-  --foam: #c9b8ee;       /* pale violet: accessory genes */
-  --link: #5a2fb0;
-  --on-dark: #f3eefb;    /* text on violet */
-  --on-dark-2: #c9bfe0;  /* quieter text on violet */
-  --with: #7fe0a8;       /* found alongside */
-  --not: #ffb347;        /* avoids */
-  --display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --atlantic: #26323d;   /* slate: hero, leadership band, headings */
+  --deep: #1b242d;       /* darker slate: figure panel, footer */
+  --paper: #f4f3ef;
+  --ink: #1a2026;
+  --muted: #5f6870;
+  --rule: #dcdcd4;
+  --gold: #d8a23f;       /* ochre: core genes, accents */
+  --foam: #a9b9c6;       /* pale slate: accessory genes */
+  --link: #2f5d7c;
+  --on-dark: #eef1f3;    /* text on slate */
+  --on-dark-2: #b9c4cc;  /* quieter text on slate */
+  --with: #8fd0a6;       /* found alongside */
+  --not: #e98a6a;        /* avoids */
+  --display: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -70,13 +73,13 @@ h1, h2, h3, .origin p, .honours .big, .site-nav .mark { font-family: var(--displ
 .site-nav .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; padding-top: 1.25rem; padding-bottom: 1.25rem; flex-wrap: wrap; }
 .site-nav a { color: var(--on-dark); text-decoration: none; }
 .site-nav a:hover { color: #fff; text-decoration: underline; }
-.site-nav .mark { font-family: var(--display); font-size: 1.125rem; letter-spacing: -0.02em; color: #fff; }
+.site-nav .mark { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; color: #fff; }
 .site-nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
 
 /* Hero: the question, then a live pangenome. Fills the first screen. */
 .hero { background: var(--atlantic); color: var(--on-dark); min-height: calc(100svh - 4rem); display: flex; align-items: center; padding: 2rem 0 3rem; }
 .hero .wrap { width: 100%; }
-.hero h1 { font-weight: 400; font-size: clamp(2.25rem, 4.7vw, 4rem); line-height: 1.04; letter-spacing: -0.035em; color: #fff; max-width: 17em; }
+.hero h1 { font-weight: 500; font-size: clamp(2.125rem, 4.2vw, 3.5rem); line-height: 1.08; letter-spacing: -0.025em; color: #fff; max-width: 17em; }
 .sim { margin-top: 2rem; }
 .sim-plot { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); }
 .ylab, .xlab { font-family: var(--sans); font-size: 0.8125rem; color: var(--on-dark-2); }
@@ -107,7 +110,7 @@ h1, h2, h3, .origin p, .honours .big, .site-nav .mark { font-family: var(--displ
 
 /* Origin story, in James's own words */
 .origin { padding: 6rem 0; border-bottom: 1px solid var(--rule); }
-.origin p { font-weight: 300; font-size: clamp(1.4375rem, 2.3vw, 2rem); line-height: 1.36; letter-spacing: -0.02em; color: var(--atlantic); max-width: 27em; padding-left: 2rem; border-left: 3px solid var(--gold); }
+.origin p { font-family: var(--serif); font-weight: 300; font-size: clamp(1.4375rem, 2.3vw, 2rem); line-height: 1.38; letter-spacing: -0.005em; color: var(--atlantic); max-width: 27em; padding-left: 2rem; border-left: 3px solid var(--gold); }
 
 /* Paper spreads: one claim, one front page */
 .spread { min-height: 76svh; display: flex; align-items: center; padding: 4rem 0; border-bottom: 1px solid var(--rule); overflow: hidden; }
@@ -115,13 +118,13 @@ h1, h2, h3, .origin p, .honours .big, .site-nav .mark { font-family: var(--displ
 .spread.flip .wrap { grid-template-columns: 400px minmax(0, 1fr); }
 .spread.flip .page, .spread.flip figure { order: -1; }
 .spread .year { font-family: var(--sans); font-size: 1rem; color: var(--muted); margin-bottom: 1rem; }
-.spread h2 { font-weight: 400; font-size: clamp(2.125rem, 4.2vw, 3.375rem); line-height: 1.05; letter-spacing: -0.035em; color: var(--atlantic); margin-bottom: 1.75rem; }
+.spread h2 { font-weight: 500; font-size: clamp(1.875rem, 3.5vw, 2.75rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--atlantic); margin-bottom: 1.75rem; }
 .spread p { max-width: 30em; }
 .read { font-family: var(--sans); font-size: 0.9375rem; line-height: 1.5; color: var(--muted); margin-top: 1.5rem; }
 .page { display: block; transform: rotate(1.5deg); transition: transform .25s ease; }
 .spread.flip .page { transform: rotate(-1.5deg); }
 .page:hover, .page:focus-visible { transform: rotate(0) scale(1.02); }
-.page img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--rule); box-shadow: 0 24px 48px -18px rgba(42, 20, 82, .38); }
+.page img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--rule); box-shadow: 0 24px 48px -18px rgba(27, 36, 45, .32); }
 
 /* Diagram panel */
 figure { background: var(--deep); border-radius: 4px; padding: 2rem; }
@@ -136,14 +139,14 @@ figure svg .quiet { fill: var(--on-dark-2); font-size: 13px; }
 
 /* Code band: thirty years of tools on one line */
 .code { padding: 5.5rem 0; border-bottom: 1px solid var(--rule); }
-.code h2 { font-weight: 400; font-size: clamp(2rem, 4vw, 3.125rem); line-height: 1.08; letter-spacing: -0.035em; color: var(--atlantic); }
+.code h2 { font-weight: 500; font-size: clamp(1.875rem, 3.5vw, 2.75rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--atlantic); }
 .code .intro { max-width: 36em; margin-top: 1.5rem; }
 .tl { list-style: none; display: grid; grid-template-columns: repeat(14, 1fr); position: relative; height: 11.5rem; margin-top: 2.5rem; }
 .tl::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px solid var(--rule); }
 .tl li { position: relative; }
 .tl li::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--dot); border: 2px solid var(--dot); transition: transform .15s ease; }
 .tl li:hover::after, .tl li:focus-within::after { transform: scale(1.5); }
-.tl .stat { --dot: #9a86cf; } .tl .phy { --dot: var(--atlantic); } .tl .ml { --dot: var(--gold); }
+.tl .stat { --dot: #8aa0b0; } .tl .phy { --dot: var(--atlantic); } .tl .ml { --dot: var(--gold); }
 .tl .mile { --dot: var(--atlantic); } .tl .mile::after { background: var(--paper); }
 .tl button { position: absolute; left: 50%; transform: translateX(-50%); width: max-content; max-width: 9.5rem; background: none; border: 0; padding: 0.4rem 0.25rem; cursor: pointer; text-align: center; font: 500 0.9375rem/1.25 var(--sans); color: var(--ink); }
 .tl li:nth-child(odd) button { bottom: calc(50% + 14px); }
@@ -156,48 +159,48 @@ figure svg .quiet { fill: var(--on-dark-2); font-size: 13px; }
 .tl-code { font-family: var(--sans); font-size: 1rem; line-height: 1.6; max-width: 46em; margin-top: 1.5rem; }
 .tl-key .key { border-radius: 50%; margin-left: 0.9em; }
 .tl-key .key:first-child { margin-left: 0; }
-.key.stat { background: #9a86cf; } .key.phy { background: var(--atlantic); } .key.ml { background: var(--gold); }
+.key.stat { background: #8aa0b0; } .key.phy { background: var(--atlantic); } .key.ml { background: var(--gold); }
 .key.mile { background: var(--paper); box-shadow: inset 0 0 0 2px var(--atlantic); }
 
 /* Writing band: newsletter, three chosen posts, Substack's own signup box */
 .writing { padding: 5.5rem 0; border-bottom: 1px solid var(--rule); }
 .writing-top { display: grid; grid-template-columns: minmax(0, 1fr) 480px; gap: 4rem; align-items: start; }
-.writing h2 { font-weight: 400; font-size: clamp(2rem, 4vw, 3.125rem); line-height: 1.08; letter-spacing: -0.035em; color: var(--atlantic); }
+.writing h2 { font-weight: 500; font-size: clamp(1.875rem, 3.5vw, 2.75rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--atlantic); }
 .writing .intro { max-width: 30em; margin-top: 1.5rem; }
 .writing .all { font-family: var(--sans); font-size: 1rem; margin-top: 1.25rem; }
 .sub-card { background: var(--atlantic); color: var(--on-dark); border-radius: 4px; padding: 2.25rem; }
-.sub-card .name { font-family: var(--display); font-size: 2rem; line-height: 1.1; letter-spacing: -0.03em; color: #fff; }
+.sub-card .name { font-family: var(--display); font-weight: 500; font-size: 1.75rem; line-height: 1.1; letter-spacing: -0.015em; color: #fff; }
 .sub-card .name + p { margin-top: 0.75rem; font-size: 1.125rem; }
 .sub-btn { display: inline-block; margin-top: 1.5rem; padding: 0.8rem 1.4rem; border-radius: 999px; background: var(--gold); color: var(--deep); font: 600 1rem var(--sans); text-decoration: none; transition: transform .1s ease, filter .15s ease; }
 .sub-btn:hover { filter: brightness(1.08); }
 .sub-btn:active { transform: translateY(1px); }
 .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 3.5rem; }
 .post { display: block; border-top: 3px solid var(--gold); padding-top: 1.25rem; text-decoration: none; color: var(--ink); }
-.post .t { display: block; font-family: var(--display); font-size: 1.625rem; line-height: 1.15; letter-spacing: -0.025em; color: var(--atlantic); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.15em; transition: text-decoration-color .15s ease; }
+.post .t { display: block; font-family: var(--display); font-weight: 500; font-size: 1.4375rem; line-height: 1.2; letter-spacing: -0.015em; color: var(--atlantic); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.15em; transition: text-decoration-color .15s ease; }
 .post:hover .t, .post:focus-visible .t { text-decoration-color: currentColor; }
 .post .s { display: block; font-size: 1.0625rem; line-height: 1.5; margin-top: 0.75rem; }
 
 /* Leadership band */
 .lead { background: var(--atlantic); color: var(--on-dark); padding: 5rem 0; }
 .lead .wrap { width: 100%; }
-.lead h2 { font-weight: 400; font-size: clamp(2rem, 4vw, 3.125rem); line-height: 1.08; letter-spacing: -0.035em; color: #fff; max-width: 20em; }
+.lead h2 { font-weight: 500; font-size: clamp(1.875rem, 3.5vw, 2.75rem); line-height: 1.1; letter-spacing: -0.02em; color: #fff; max-width: 20em; }
 .lead .intro { max-width: 34em; margin-top: 1.75rem; }
 .roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; margin-top: 3rem; }
 .roles > div { border-top: 3px solid var(--gold); padding-top: 1.25rem; }
 .roles .mark, .honours .mark { display: block; width: 56px; height: 56px; margin-bottom: 1.25rem; fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .roles .when { font-family: var(--sans); font-size: 0.9375rem; color: var(--on-dark-2); }
-.roles h3 { font-weight: 400; font-size: 1.625rem; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-top: 0.4rem; }
+.roles h3 { font-weight: 500; font-size: 1.5rem; line-height: 1.15; letter-spacing: -0.015em; color: #fff; margin-top: 0.4rem; }
 .roles .where { font-family: var(--sans); font-size: 1rem; line-height: 1.4; color: #fff; margin-top: 0.5rem; }
 .roles .where + p { font-size: 1.0625rem; line-height: 1.5; margin-top: 0.9rem; }
 .honours { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,.2); }
-.honours .big { font-size: 2rem; font-weight: 300; line-height: 1; color: var(--gold); }
+.honours .big { font-size: 1.875rem; font-weight: 300; line-height: 1; color: var(--gold); }
 .honours .big + p { font-family: var(--sans); font-size: 1rem; line-height: 1.4; color: #fff; margin-top: 0.6rem; }
 .lead .also { font-family: var(--sans); font-size: 1rem; line-height: 1.55; color: var(--on-dark-2); max-width: 44em; margin-top: 3rem; }
 
 /* Closing band: about and contact side by side */
 .close { padding: 5rem 0; }
 .close .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
-.close h2 { font-weight: 400; font-size: 2rem; line-height: 1.15; letter-spacing: -0.03em; color: var(--atlantic); margin-bottom: 1rem; }
+.close h2 { font-weight: 500; font-size: 1.75rem; line-height: 1.15; letter-spacing: -0.015em; color: var(--atlantic); margin-bottom: 1rem; }
 .close .mail { font-size: 1.5rem; font-weight: 300; }
 .close ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin-top: 1.25rem; font-family: var(--sans); font-size: 1rem; }
 .close address { font-style: normal; font-family: var(--sans); font-size: 0.9375rem; color: var(--muted); margin-top: 1.25rem; line-height: 1.5; }
@@ -337,24 +340,24 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
     <figure><svg viewBox="0 0 520 330" role="img" aria-label="A row of gene names, dnaA, dnaN and recF, followed by a blank. Below, a model ranks candidates for the blank, with gyrB the most likely.">
         <text class="quiet" x="10" y="26">Genes read so far</text>
         <g>
-          <rect x="10" y="42" width="104" height="44" rx="22" fill="#c9b8ee"/>
-          <rect x="128" y="42" width="104" height="44" rx="22" fill="#c9b8ee"/>
-          <rect x="246" y="42" width="104" height="44" rx="22" fill="#c9b8ee"/>
-          <rect id="gpt-slot" x="364" y="42" width="104" height="44" rx="22" fill="#ff5c93" stroke="#ff5c93" stroke-width="2.5"/>
+          <rect x="10" y="42" width="104" height="44" rx="22" fill="#a9b9c6"/>
+          <rect x="128" y="42" width="104" height="44" rx="22" fill="#a9b9c6"/>
+          <rect x="246" y="42" width="104" height="44" rx="22" fill="#a9b9c6"/>
+          <rect id="gpt-slot" x="364" y="42" width="104" height="44" rx="22" fill="#d8a23f" stroke="#d8a23f" stroke-width="2.5"/>
         </g>
         <g text-anchor="middle" style="font-style:italic">
-          <text x="62" y="70" style="fill:#2a1452;font-size:18px">dnaA</text>
-          <text x="180" y="70" style="fill:#2a1452;font-size:18px">dnaN</text>
-          <text x="298" y="70" style="fill:#2a1452;font-size:18px">recF</text>
-          <text id="gpt-q" x="416" y="70" style="fill:#2a1452;font-size:18px">gyrB</text>
+          <text x="62" y="70" style="fill:#1b242d;font-size:18px">dnaA</text>
+          <text x="180" y="70" style="fill:#1b242d;font-size:18px">dnaN</text>
+          <text x="298" y="70" style="fill:#1b242d;font-size:18px">recF</text>
+          <text id="gpt-q" x="416" y="70" style="fill:#1b242d;font-size:18px">gyrB</text>
         </g>
         <text class="quiet" x="10" y="150">Model's ranking for the next gene</text>
         <text x="10" y="188" style="font-style:italic">gyrB</text>
-        <rect class="bar" x="80" y="174" width="380" height="18" fill="#ff5c93"/>
+        <rect class="bar" x="80" y="174" width="380" height="18" fill="#d8a23f"/>
         <text x="10" y="228" style="font-style:italic">yaaA</text>
-        <rect class="bar" x="80" y="214" width="34" height="18" fill="#c9b8ee" opacity=".7"/>
+        <rect class="bar" x="80" y="214" width="34" height="18" fill="#a9b9c6" opacity=".7"/>
         <text x="10" y="268" style="font-style:italic">rpmH</text>
-        <rect class="bar" x="80" y="254" width="18" height="18" fill="#c9b8ee" opacity=".7"/>
+        <rect class="bar" x="80" y="254" width="18" height="18" fill="#a9b9c6" opacity=".7"/>
         <text class="quiet" x="10" y="312">Illustration, not model output</text>
       </svg><button type="button" id="gpt-go" hidden>Predict the next gene</button></figure>
   </div>
@@ -499,7 +502,7 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
   var toggle = document.getElementById('sim-toggle'), reseed = document.getElementById('sim-seed');
   var status = document.getElementById('sim-status'), labCore = document.getElementById('lab-core');
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var GAP = 2, TOP = 8, GOLD = '#ff5c93', FOAM = '#c9b8ee', WITH = '#7fe0a8', NOT = '#ffb347';
+  var GAP = 2, TOP = 8, GOLD = '#d8a23f', FOAM = '#a9b9c6', WITH = '#8fd0a6', NOT = '#e98a6a';
   var seed = 1994, rand, W, H, rows, cols, core, cell, grid, count, freq;
   var chosen = -1, rel = [], touring = !reduced, hovering = false, born = 0, timer = null;
 
@@ -666,7 +669,7 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
   function reset() {
     fig.classList.add('idle');
     slot.setAttribute('fill', 'none'); slot.setAttribute('stroke-dasharray', '6 6');
-    q.textContent = '?'; q.style.fill = '#ff5c93';
+    q.textContent = '?'; q.style.fill = '#d8a23f';
     go.textContent = 'Predict the next gene';
   }
   go.hidden = false; reset();
@@ -676,8 +679,8 @@ footer { background: var(--deep); color: var(--on-dark-2); font-family: var(--sa
     go.textContent = 'Start again';
     setTimeout(function () {
       if (fig.classList.contains('idle')) return;
-      slot.setAttribute('fill', '#ff5c93'); slot.removeAttribute('stroke-dasharray');
-      q.textContent = 'gyrB'; q.style.fill = '#2a1452';
+      slot.setAttribute('fill', '#d8a23f'); slot.removeAttribute('stroke-dasharray');
+      q.textContent = 'gyrB'; q.style.fill = '#1b242d';
     }, 750);
   });
 })();
